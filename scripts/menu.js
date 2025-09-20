@@ -9,10 +9,10 @@ function injectMobileMenu() {
           top: 0;
           left: 0;
           z-index: 10000;
-           background: linear-gradient(to right, #898484, #000000);
+           background: linear-gradient(to right, #1f3d07ff, #000000);
         }
         .main-nav {
-           background: linear-gradient(to right, #8984841f, #00000044);
+     
         }
         .nav-links {
           position: fixed;
@@ -141,7 +141,7 @@ function injectMobileMenu() {
       }
       @media (min-width: 769px) {
         .main-header {
-          background: linear-gradient(to bottom, #000000ff, #3f020bff);
+            background: linear-gradient(to right, #1f3f06ff, #000000);
         }
         .nav-links li > button {
           display: none !important;
@@ -208,50 +208,9 @@ function injectMobileMenu() {
         <ul class="nav-links" id="navLinks">
           <li>
             <a href="index.html">Home</a>
-            <button class="account-btn"><a href="index.html">Home</a></button>
+            <button class="account-btn"><a href="index.html">Refresh Map</a></button>
           </li>
-          <li class="nav-dropdown">
-            <a href="#">Admin Dashboard</a>
-            <button class="acc-admin"><a href="#">Admin Dashboard</a></button>
-            <ul class="dropdown">
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="manage-buses.html">Manage Buses</a></li>
-              <li><a href="manage-drivers.html">Manage Drivers</a></li>
-              <li><a href="tracking.html">Trip & Ride Tracking</a></li>
-              <li><a href="maintenance.html">Maintenance Requests</a></li>
-              <li><a href="settings.html">Settings / Profile</a></li>
             </ul>
-          </li>
-          <li class="nav-dropdown driver-panel">
-            <a href="#">Drivers Panel</a>
-            <button class="account-btn"><a href="#">Driver panel</a></button>
-            <ul class="dropdown">
-              <li><a href="driver-bus-routes.html">My Bus & Routes</a></li>
-              <li><a href="driver-bus-routes.html" id="driverDashboardLink">My Dashboard</a></li>
-              <li><a href="driver-trip.html">Start / End Trip</a></li>
-              <li><a href="driver-payments.html">Passengers Counts & Payments</a></li>
-              <li><a href="driver-report.html">Report Vehicle issue</a></li>
-              <li><a href="driver-history.html">Ride History</a></li>
-              <li><a href="driver-profile.html">Profile</a></li>
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="#">Contact Us</a>
-            <button class="account-btn"><a href="#">Support</a></button>
-            <ul class="dropdown">
-              <li><a href="support.html">Contact Support</a></li>
-              
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="#">Account</a>
-            <button class="account-btn1"><a href="#">Account</a></button>
-            <ul class="dropdown">
-              <li><a href="duo.html">Sign in</a></li>
-             
-            </ul>
-          </li>
-        </ul>
       </nav>
     </header>
     `;
@@ -416,7 +375,7 @@ function updateAccountMenu(user) {
     }
 
     accountDropdown.innerHTML = `
-      <li><a href="duo.html">Access Dashboard</a></li>
+      <li><a href="duo.html">Acces</a></li>
       <li><a href="#" id="signOutBtn"><span id="signOutText">Sign Out</span></a></li>
     `;
     // Add sign out functionality

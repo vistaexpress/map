@@ -130,7 +130,7 @@
   <div class="hero-content">
           
           <!-- Dynamic CTA Button -->
-<button class="cta-button" id="ctaBtn">Access Dashboard</button>
+<button class="cta-button" id="ctaBtn">Explore POLYTEC</button>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('ctaBtn');
@@ -139,8 +139,11 @@
     function updateCTA() {
       try {
         // default state
-        btn.textContent = 'Access Dashboard';
-        btn.onclick = function() { window.location.href = 'duo.html'; };
+        btn.textContent = 'EXPLORE FEDPONEK';
+        btn.onclick = function() {
+          // Redirect to Google Earth location for FEDPONEK
+          window.location.href = 'https://earth.google.com/web/@5.43871135,7.02877885,69.37523391a,716.22717578d,35y,137.50885651h,61.99943841t,-0r/data=CgRCAggBMigKJgokCiAxNXZpbUk4dXV2MkFXVDVNV2JsWGpLM1B6c2VlZUJIOCACOgMKATBCAggASggIoJeFjAcQAQ?authuser=0';
+        };
 
         // Firebase user (highest priority), but respect stored role marker when present
         if (typeof firebase !== 'undefined' && firebase.auth) {
@@ -212,7 +215,7 @@
             opacity: 1;
           }
             .cta-button {
-              background: linear-gradient(90deg, #262626 0%, #ff3c3c 100%);
+              background: linear-gradient(90deg, #4d732b 0%, #000000 100%);
               color: #fff;
               border: none;
               border-radius: 10px;
@@ -237,7 +240,20 @@
       </section>
       
    
-
+   <a class="search-card" href="https://www.google.com/maps/d/u/1/viewer?mid=15vimI8uuv2AWT5MWblXjK3PzseeeBH8&ll=5.433952476181308%2C7.031284799830617&z=17" target="_blank" rel="noopener noreferrer" aria-label="Open campus map in Google Maps">
+            <div class="search-card-inner">
+              <div class="search-left">
+                <i class="fas fa-search-location"></i>
+              </div>
+              <div class="search-center">
+                <div class="search-title">Open Campus Map</div>
+                <div class="search-sub">Click to view campus map and directions</div>
+              </div>
+              <div class="search-right">
+                <button class="search-go" aria-hidden="true">Open</button>
+              </div>
+            </div>
+          </a>
   <section class="services">
         <div class="services-header">
           <h2>Campus & Map Exploration</h2>
@@ -292,6 +308,8 @@
               <li><i class="fas fa-check"></i>Save favorite programs for later</li>
             </ul>
           </div>
+          <!-- Clickable Search Card (opens Google Maps custom map) -->
+       
         </div>
       </section>
 
@@ -370,7 +388,7 @@
           }
           .service-icon i {
             font-size: 2rem;
-            color: #dc1a1a;
+            color: #28a745; /* green */
           }
           .service-title {
             color: #ffffff;
@@ -396,11 +414,40 @@
             color: #ffffff;
           }
           .service-features i {
-            color: #dc1a1a;
+            color: #28a745; /* green */
             margin-right: 1rem;
             font-size: 0.9rem;
-            opacity: 0.8;
+            opacity: 0.9;
           }
+          /* Search card styles */
+          .search-card {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            background: linear-gradient(180deg, #0f1720 0%, #131921 100%);
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+            align-self: stretch;
+          }
+          .search-card:hover, .search-card:focus {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+            border-color: #dc1a1a;
+          }
+          .search-card-inner { display: flex; align-items: center; width: 100%; }
+          .search-left { width: 56px; height: 56px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(255,255,255,0.03); margin-right:1rem; }
+          .search-left i { font-size:1.4rem; color: #dc1a1a; }
+          .search-center { flex:1; min-width:0; }
+          .search-title { font-weight:700; color:#fff; font-size:1.05rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+          .search-sub { color:#bfc6cc; font-size:0.9rem; margin-top:0.15rem; overflow:hidden; text-overflow:ellipsis; }
+          .search-right { margin-left:1rem; }
+          .search-go { background:#dc1a1a; color:#fff; border:none; padding:0.5rem 0.9rem; border-radius:8px; cursor:pointer; font-weight:600; }
+          .search-go:focus { outline:2px solid rgba(220,26,26,0.25); }
+
          
         </style>
         
