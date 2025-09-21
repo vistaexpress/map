@@ -207,7 +207,7 @@ function injectMobileMenu() {
         </button>
         <ul class="nav-links" id="navLinks">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html">Refresh Map</a>
             <button class="account-btn"><a href="index.html">Refresh Map</a></button>
           </li>
             </ul>
